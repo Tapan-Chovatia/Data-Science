@@ -1,0 +1,6 @@
+select Email from 
+(select Email, count(Email) as Email_count 
+    from Person
+    Group by Email) as Multiples
+where Email_count > 1
+;   
